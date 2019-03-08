@@ -4,11 +4,11 @@
 
 This is the evaluation test for Python Analysis Package for AWAKE. Please fork this repository and complete the steps listed below.
 
-* This test is based on a single hdf file which can be downloaded from [CERNBox](https://cernbox.cern.ch/index.php/s/wk7SN1qt2O7jbrl). This is a public link which should prompt you to download the file. Please contact me if you have issues with the dowload.
+* The test is based on a single hdf file which can be downloaded from [CERNBox](https://cernbox.cern.ch/index.php/s/wk7SN1qt2O7jbrl). This is a public link which should prompt you to download the file. Please contact me if you have issues with the dowload.
 
 * The file name starts with an 18 digit number, which is the UNIX time in nanoseconds. Using the python [datetime](https://docs.python.org/3/library/datetime.html) library and [pytz](http://pytz.sourceforge.net/), convert this number to a python datetime object in both UTC and CERN local time.
 
-* Use the [h5py](http://docs.h5py.org/en/stable/) library to open the hdf file. The file is organized as directory tree with [groups](http://docs.h5py.org/en/stable/high/group.html) and [datasets](http://docs.h5py.org/en/stable/high/dataset.html). Write a program which explores all branches of the directory tree and identifies all of the datasets in the file. Your program should create a csv file which records the names of all of the groups and datasets, and includes the size, shape and type of  data in each dataset.
+* Use the [h5py](http://docs.h5py.org/en/stable/) library to open the hdf file. The file is organized as a directory tree with [groups](http://docs.h5py.org/en/stable/high/group.html) and [datasets](http://docs.h5py.org/en/stable/high/dataset.html). Write a program which explores all branches of the directory tree and identifies all of the datasets in the file. Your program should create a csv file which records the names of all of the groups and datasets, and includes the size, shape and type of  data in each dataset.
 
 * In the hdf file, there is 2D image data stored as a 1D array in the dataset called "/AwakeEventData/XMPP-STREAK/StreakImage/streakImageData". The datasets "/AwakeEventData/XMPP-STREAK/StreakImage/streakImageHeight" and "/AwakeEventData/XMPP-STREAK/StreakImage/streakImageWidth" store information about the height and width of the image. Use [numpy.reshape](https://docs.scipy.org/doc/numpy/reference/generated/numpy.reshape.html) to convert the 1D array into a 2D image. Then, use [scipy.signal.medfilt](https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.signal.medfilt.html) to filter the image. Finally, use [matplotlib](https://matplotlib.org/) to display the image and save it as a png file.
 
