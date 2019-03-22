@@ -22,4 +22,6 @@ Your project proposal should address two topics:
 
 - Once the database has been created, you can contribute to the development of analysis tools for the AWAKE data. This can include image analysis and data visualization tools. There is also an opportunity to use machine learning algorithms to search for correlations in the data, but that is not a requirement for the project.
 
+See the project proposal guidelines [document](https://github.com/awakeExp/gsoc_eval/blob/master/AWAKE_GSoC_proposal%20guidelines.pdf) for more details.
+
 ### If you have any questions, don't hesitate to contact me at [spencer.j.gessner@cern.ch].
